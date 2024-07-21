@@ -46,14 +46,13 @@ header .bx-left-arrow {
     margin-left: 10px;
     padding: 5px;
     font-size: 24px; /* Tamaño del ícono */
-    color: transparent; /* Color del ícono */
+    color: #333; /* Color del ícono */
     position: absolute; /* Posición absoluta para mantenerlo a la izquierda */
     left: 10px; /* Alinear a la izquierda */
     top: 50%; /* Alineación vertical centrada */
     transform: translateY(-50%); /* Ajuste vertical exacto */
     text-decoration: none;
     border-radius: 10%;
-    text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.5);
 }
 
 header .bx-left-arrow:hover {
@@ -122,23 +121,26 @@ footer {
     color: #4B4453;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
-/* Estilos para la imagen del logo */
-.camaron-brujo {
+footer .pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alineación vertical de los elementos */
+}
+
+footer .pie img {
     width: 35px; /* Ancho fijo para el logo */
     height: auto; /* Ajusta la altura automáticamente */
-    position: absolute; /* Posición absoluta para colocar exactamente */
-    top: 10px; /* Alineación vertical desde arriba */
-    right: 70%; /* Alineación derecha desde el borde derecho */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
 }
 
 footer p {
     margin: 0;
-    float: none;
 }
 
