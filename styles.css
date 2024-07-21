@@ -19,14 +19,18 @@ body {
     overflow: hidden; /* Para asegurar que los elementos floten correctamente */
 }
 
+/* Estilos para el encabezado */
 header {
     background-color: #EEF0E5;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #000;
     padding: 30px;
-    margin: 20px 50px; /* Centrar el encabezado horizontalmente */
+    margin: 20px 0; /* Ajuste horizontal del margen */
     border-radius: 30px;
     text-align: center;
+    display: flex; /* Usamos flexbox para alinear verticalmente */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Alinear a la izquierda */
     position: relative; /* Asegurar posición relativa para elementos internos absolutos */
 }
 
@@ -36,19 +40,23 @@ header h1 {
     display: contents; /* Permite alinear elementos a su lado */
 }
 
-header a {
-    width: 20px;
-    height: 20px;
+/* Estilos para el botón de ícono junto al título */
+header .bx-left-arrow {
+    margin-right: 10px; /* Espacio entre el ícono y el título */
+    margin-left: 10px;
     padding: 5px;
-    margin: 12px 10px;
+    font-size: 24px; /* Tamaño del ícono */
+    color: transparent; /* Color del ícono */
+    position: absolute; /* Posición absoluta para mantenerlo a la izquierda */
+    left: 10px; /* Alinear a la izquierda */
+    top: 50%; /* Alineación vertical centrada */
+    transform: translateY(-50%); /* Ajuste vertical exacto */
     text-decoration: none;
-    color: #000000;
-    position: relative;
-    float: left;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
-header a:hover {
+
+header .bx-left-arrow:hover {
     background-color: #333;
     color: #EEF0E5;
 }
