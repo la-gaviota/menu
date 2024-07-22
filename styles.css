@@ -56,8 +56,9 @@ header .bx-left-arrow {
 }
 
 header .bx-left-arrow:hover {
-    background-color: #333;
-    color: #EEF0E5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 25%;
+    color: #333;
 }
 
 h2 {
