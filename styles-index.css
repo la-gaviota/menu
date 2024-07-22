@@ -1,0 +1,166 @@
+/* Estilos generales */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    background-color: #b6b39a;
+    color: #000000;
+}
+
+header {
+    background-color: #EEF0E5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #000000;
+    padding: 30px;
+    margin: 20px 30px; /* Centrar el encabezado horizontalmente */
+    border-radius: 30px;
+    text-align: center;
+    position: relative; /* Asegurar posición relativa para elementos internos absolutos */
+}
+
+header .title h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header .title p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 0px;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #EEF0E5;
+    padding: 10px 15px;
+    margin: 0px 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #EEF0E5;
+    color: #333;
+}
+
+.contactos {
+    width: 90%; /* Ajuste para que se vea bien en dispositivos más pequeños */
+    max-width: 600px; /* Ancho máximo para evitar que se vea muy extendido en pantallas grandes */
+    margin: 20px auto;
+    background-color: #EEF0E5;
+    padding: 5px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.contactos .subtitulo {
+    margin: 10px auto; /* Centrar el subtítulo */
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.contactos .lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0; /* Espacio arriba y abajo para separar de otros elementos */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contactos .lista li {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    text-align: center;
+    padding: 0;
+}
+
+.contactos .lista li a {
+    display: block;
+    padding: 10px 5px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+.contactos .lista li a:hover {
+    background-color: #EEF0E5; /* Color de fondo al pasar el ratón */
+    color: #333; /* Color del texto al pasar el ratón */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos adicionales para dispositivos pequeños */
+@media (max-width: 600px) {
+    .contactos {
+        padding: 3px; /* Menos espacio interno en dispositivos pequeños */
+    }
+
+    .contactos .subtitulo {
+        margin: 5px 30px;
+    }
+
+    .contactos .lista li {
+        flex-basis: 20%;
+        margin: 2px 0;
+        padding: auto;
+    }
+}
+
+
+footer {
+    background-color: #EEF0E5;
+    color: #4B4453;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alineación vertical de los elementos */
+}
+
+footer .pie img {
+    width: 35px; /* Ancho fijo para el logo */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+footer p {
+    margin: 0;
+}
+
