@@ -1,36 +1,96 @@
 /* Estilos generales */
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     margin: 0;
     padding: 0;
     background-color: #b6b39a;
     color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header {
-    background-color: #EEF0E5;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    color: #000000;
-    padding: 30px;
-    margin: 20px 30px; /* Centrar el encabezado horizontalmente */
-    border-radius: 30px;
-    text-align: center;
-    position: relative; /* Asegurar posición relativa para elementos internos absolutos */
+/* Estilo para dispositivos de 800px hacia arriba */
+@media (min-width: 1200px) {
+    header {
+        display: flex;
+        background-color: #EEF0E5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        color: #000000;
+        padding: 30px;
+        margin: 20px 30px; /* Centrar el encabezado horizontalmente */
+        border-radius: 30px;
+        text-align: center;
+        position: relative; /* Asegurar posición relativa para elementos internos absolutos */
+    }
+
+    header .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Alinear elementos a la izquierda y derecha */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    header .title img {
+        height: 80px;
+        width: auto; /* Ajustar el ancho según tu diseño */
+        margin-right: 10px; /* Espacio entre la imagen y otros elementos */
+    }
+
+    header .img-title {
+        width: auto;
+        height: auto;
+        margin-right: auto; /* Alinea la imagen title a la izquierda */
+    }
+
+    header .img-gaviota {
+        width: auto;
+        height: auto;
+        margin-left: auto; /* Alinea la imagen gaviota a la derecha */
+    }
+
+    header .img-title-litle {
+        display: none; /* Oculta la segunda imagen en resoluciones grandes */
+    }
 }
 
-header .title h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
 
-header .title p {
-    margin: 0;
-    font-size: 1.2rem;
-}
 
+
+
+/* Deja este espacio para el header en dispositivos más pequeños */
+/* Puedes definir los estilos para dispositivos más pequeños aquí */
+@media (max-width: 1199px) {
+    /* Aquí puedes definir los estilos para el header en dispositivos más pequeños */
+    /* Por ejemplo: */
+    header {
+        background-color: #EEF0E5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        color: #000000;
+        padding: 5px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    header .title img {
+        display: none;
+    }
+    header .img-title {
+        display: none; /* Oculta la segunda imagen en dispositivos pequeños */
+    }
+    header .img-title-litle {
+        width: auto;
+        height: 79px;
+    }
+}
+/*---------------------------------------------------------------------------------------*/
 main {
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero {
@@ -67,7 +127,7 @@ main {
     background-color: #EEF0E5;
     color: #333;
 }
-
+/*---------------------------------------------------------------------------------------*/
 .contactos {
     width: 90%; /* Ajuste para que se vea bien en dispositivos más pequeños */
     max-width: 600px; /* Ancho máximo para evitar que se vea muy extendido en pantallas grandes */
@@ -134,17 +194,65 @@ main {
         padding: auto;
     }
 }
+/*---------------------------------------------------------------------------------------*/
+.carousel-container {
+    width: 50%;
+    max-width: 800px;
+    margin: 20px auto; /* Cambiado para dar 20px de espacio arriba y abajo */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
 
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+    animation: slide 20s infinite;
+}
 
+.carousel img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 80%;
+    }
+}
+/*---------------------------------------------------------------------------------------*/
 footer {
     background-color: #EEF0E5;
     color: #4B4453;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
+    font-size: 15px;
+    padding: 5px 0;
     width: 100%;
+    margin-top: auto; /* Hace que el footer se pegue al final */
+}
+
+@media (max-width: 600px) {
+    footer {
+        background-color: #EEF0E5;
+        color: #4B4453;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-size: 15px;
+        padding: 3px 0;
+        width: 100%;
+        margin-top: auto; /* Hace que el footer se pegue al final */
+    }
 }
 
 footer .pie {
@@ -152,6 +260,7 @@ footer .pie {
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Alineación vertical de los elementos */
+    height: 100%;
 }
 
 footer .pie img {
@@ -163,4 +272,13 @@ footer .pie img {
 footer p {
     margin: 0;
 }
+/*---------------------------------------------------------------------------------------*/
+@media (min-width: 1200px) {
+    header .title h1 {
+        margin-right: 0; /* Eliminar el margen derecho del título para la imagen */
+    }
 
+    header .img-title {
+        width: 10%; /* Reducir el ancho de la imagen para mantener el diseño */
+    }
+}
